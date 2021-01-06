@@ -1,0 +1,19 @@
+<p>blog</p>
+<div >
+  <form (ngSubmit)="updatePost(); hideForm()" *ngIf="vis">
+    <input [(ngModel)]="updatedTitle" type="text" name="title" >
+    <textarea [(ngModel)]="updatedText" type="text" name="text" ></textarea>
+    <button>submit</button>
+  </form>
+</div>
+<div *ngFor="let blogpost of blogPosts" class="lalatest">
+  <div (click)="editedPost = blogpost; showForm()">
+    <p>{{blogpost.title}}</p>
+    <p>{{blogpost.text}}</p>
+  </div>
+</div>
+<form (ngSubmit)="addBlogPost()">
+  <input [(ngModel)]="title" type="text" name="title" >
+  <textarea [(ngModel)]="text" type="text" name="text" ></textarea>
+  <button>submit</button>
+</form>

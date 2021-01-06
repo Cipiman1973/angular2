@@ -1,0 +1,12 @@
+.lalatest {
+  background-color: red;
+}
+.lalatest :hover {
+  background-color: aqua;
+}
+
+.edit {
+  visibility: hidden;
+}
+
+/*# sourceMappingURL=blog.component.css.map */
